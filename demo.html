@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style> 
+        .box {
+            width: 92%;
+            height: 100px;
+            background-color: pink;
+            margin: auto;
+        }
+        .box1,.box2 {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            margin: auto;
+            border: 1px solid #000;
+        }
+        /*.box1 {*/
+            /*position: relative;*/
+            /*top: 20px;*/
+            /*padding-bottom: 100px;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<br/>
+<br/>
+<div class="box1"></div>
+<br/>
+<br/>
+<div class="box2"></div>
+<script src="jQuery版本/jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+       $('.box1,.box2').mouseenter(function () {
+           $(this).animate({'width':120,
+           'height':120});
+       });
+    });
+</script>
+</body>
+</html>

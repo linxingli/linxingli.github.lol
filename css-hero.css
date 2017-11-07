@@ -1,0 +1,479 @@
+/*版心*/
+.w {
+    width: 1241px;
+    margin:0 auto;
+}
+body {
+    width: 100%;
+    background: url(images/aboutBackground.jpg) no-repeat;
+    background-position: 50% 80px;
+    background-size: 100%;
+    background-color: #0a0a0c;
+}
+
+/*head模块开始*/
+.top {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    /*overflow: hidden;*/
+    background-color: #121212;
+    border-bottom: 2px solid #262626;
+}
+
+.top .left {
+    width: 132px;
+    float: left;
+    height: 60px;
+    position: absolute;
+
+}
+
+.top .left a {
+    position: absolute;
+    color: #a29c90;
+    top: 13px;
+    left: 45px;
+    text-decoration: none;
+}
+
+.top .left img:last-child {
+    position: absolute;
+    bottom: 8px;
+    left: 45px;
+}
+
+.top .left img:first-child {
+    position: absolute;
+    bottom: 8px;
+}
+
+.top .center {
+    margin: auto;
+    position: relative;
+    width: 680px;
+    height: 60px;
+    overflow: hidden;
+
+}
+
+.top .center img {
+    line-height: 60px;
+}
+
+.top .center span {
+    line-height: 60px;
+    font-size: 22px;
+    position: absolute;
+    color: #262626;
+
+}
+
+.top .center .link {
+    left: 800px;
+    height: 60px;
+    float: right;
+
+}
+
+.top .center .link a {
+    float: left;
+    text-align: center;
+    color: #c9aa71;
+    font-size: 14px;
+    padding: 15px 0 4px;
+    border-bottom: 1px solid transparent;
+    margin: 0 20px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.top .center .link a:hover {
+    color: #fff;
+    border-bottom: 2px solid #c9aa71;
+}
+
+.top .right {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+}
+
+.top .right a {
+    color: #c9aa71;
+    margin-right: 10px;
+    text-decoration: none;
+
+}
+
+.top .right span {
+    font-size: 22px;
+    margin-right: 5px;
+    color: #262626;
+}
+
+.diqu {
+    position: relative;
+}
+
+.diqu img {
+    position: absolute;
+    top: 71px;
+    left: 620px;
+}
+
+.diqu a {
+    font-size: 35px;
+    color: #d3c7aa;
+    position: absolute;
+    left: 600px;
+    top: 163px;
+    text-decoration: none;
+}
+
+/*head模块结束*/
+
+/*隐藏的搜索栏开始*/
+.hideSearch {
+    width: 100%;
+    height: 124px;
+    background-color: #000;
+    position: absolute;
+    z-index: 10;
+    border-bottom: 1px solid #c9aa71;
+    display: none;
+    -moz-box-shadow:0 0 10px 10px #000;
+    -webkit-box-shadow:0 0 10px 10px #000;
+    box-shadow:0 0 10px 10px #000;
+}
+.centerHideSearch {
+    width: 877px;
+    height: 122px;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    margin-left: -438px;
+}
+.hideSearch input {
+    width: 757px;
+    height: 57px;
+    padding: 20px;
+    font-size: 30px;
+    background-color: #121212;
+    color: #d3c7aa;
+}
+.hideSearch #fangdajing {
+    width: 59px;
+    height: 62px;
+    cursor: pointer;
+}
+.hideSearch #closeIcon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    position: absolute;
+    right: 46px;
+    top: 46px;
+}
+
+/*隐藏的搜索栏结束*/
+
+/*搜索模块开始*/
+.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    /*z-index: 9;*/
+}
+.search {
+    height: 90px;
+    width: 100%;
+    background-color: #121212;
+    z-index: 9;
+}
+.search .icon_champion {
+    width: 18.172px;
+    height: 32px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 28px;
+    margin-right: 20px;
+}
+/*搜索栏*/
+.search .head-search {
+    width: 626px;
+    height: 19px;
+    padding:35px 12px ;
+    background-color: #121212;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #c4b998;
+    font-weight: 800;
+}
+/*筛选方式*/
+.search .select-search {
+    width: 366px;
+    height: 90px;
+    float: right;
+    background-color: #121212;
+    cursor: pointer;
+    position: relative;
+}
+.search .select-search .hide-bar {
+    width: 366px;
+    height: 132px;
+    position: absolute;
+    background-color: #121212;
+    top: 90px;
+    list-style: none;
+    z-index: 1;
+    display: none;
+}
+.search .select-search .hide-bar li {
+    width: 296px;
+    height: 44px;
+    font-size: 12px;
+    line-height: 44px;
+    padding-left: 70px;
+    letter-spacing: 2px;
+    color: #c4b998;
+    font-weight: 800;
+}
+.search .select-search .select-icon {
+    width: 21.328px;
+    height: 18px;
+    margin-left: 15px;
+    /*margin-top: 35px;*/
+}
+.search .select-search .way-span {
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #c4b998;
+    font-weight: 800;
+    margin-left: 30px;
+    line-height: 90px;
+
+}
+.search .select-search .az-span {
+    display: inline-block;
+    color: #937341;
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: 800;
+}
+/*搜索模块结束*/
+
+/*内容展示模块开始*/
+.content {
+    width: 100%;
+    position: relative;
+    background-color: #0a0a0c;
+    background-color:rgba(0,0,0,0.8);
+}
+.content .hero-icon {
+    width: 20px;
+    height: 34px;
+    position: absolute;
+    top: 106px;
+    left: 50%;
+    margin-left: -10px;
+
+}
+.content h2 {
+    position: absolute;
+    top: 151px;
+    left: 48.2%;
+    font-size: 23px;
+    letter-spacing: 4px;
+    color: #c0b595;
+}
+.content .line-left {
+    position: absolute;
+    top: 165px;
+    left: 21%;
+    width: 302px;
+    height: 1px;
+    transform: rotateY(180deg);
+}
+.content .line-right {
+    position: absolute;
+    top: 165px;
+    left: 56.5%;
+    width: 302px;
+    height: 1px;
+}
+/*英雄卡片模块开始*/
+.hero-card {
+    position: relative;
+    top: 231px;
+    padding-bottom: 600px;
+}
+.hero-card .hero-card-ul {
+    position: relative;
+    list-style: none;
+    width: 100%;
+}
+.content .return-top {
+    width: 20px;
+    height: 80px;
+    text-align: center;
+    position: fixed;
+    right: 25px;
+    bottom: 30px;
+    background-color: #666;
+    display: none;
+    cursor: pointer;
+    box-shadow:0 0 10px 10px #666666;
+    border-radius: 20px;
+}
+/*英雄名片li标签样式*/
+
+.content .hero-card .hero-card-ul li {
+    box-shadow: 0 0 20px black;
+    width: 232px;
+    height: 420px;
+    border: 1px solid black;
+    /*margin: 15px 6px 15px 6px;*/
+    background:url("images/0.jpg") no-repeat;
+    background-position: 84.1152% 9.62343%;
+    background-size: cover;
+    position: absolute;
+    box-shadow:0px 0px 10px 10px #000;
+}
+.content .hero-card .hero-card-ul li:hover {
+    border: 1px solid #927345;
+    z-index: 2;
+}
+
+.content .hero-card .hero-card-ul li .dw {
+    position: absolute;
+    bottom: 0;
+}
+.content .hero-card .hero-card-ul li .intro {
+    padding-top: 20px;
+    height: 55px;
+    width: 234px;
+    border-top: 1px solid #927345;
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+}
+.content .hero-card .hero-card-ul li .intro span {
+    font-size: 14px;
+    color: #927345;
+}
+.content .hero-card .hero-card-ul li .intro p {
+    font-size: 13px;
+}
+.content .hero-card .hero-card-ul li .explore {
+    height: 55px;
+    position: relative;
+    width: 234px;
+    border-top: 1px solid #927345;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+}
+.content .hero-card .hero-card-ul li .explore > span{
+    position: absolute;
+    left: 84px;
+    top: 15px;
+}
+
+/*探索的动画小箭头*/
+.srow {
+    width: 96px;
+    height: 30px;
+    position: absolute;
+    left: 100px;
+    top: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.hideImg {
+    position: absolute;
+    left: -18px;
+    top: 0px;
+    width: 18px;
+    height: 10px;
+
+}
+.showImg {
+    position: absolute;
+    left: 48px;
+    top: 0px;
+    width: 18px;
+    height: 10px;
+}
+.hideImg img{
+    width: 18px;
+    height: 10px;
+}
+.showImg img{
+    width: 18px;
+    height: 10px;
+}
+
+
+/*英雄名片模块结束*/
+
+/*内容展示模块结束*/
+/*底部模块开始*/
+.buttom {
+    width: 100%;
+    background-color: #0a0a0c;
+    height: 280px;
+    border-top: 1px solid #937341;
+}
+.buttom .tencentLogo {
+    margin: 42px auto;
+    width: 330px;
+    height: 66px;
+    background-color: #f3f3f3;
+    border: 5px solid #f3f3f3;
+    border-radius: 5px;
+}
+.buttom .link {
+    list-style: none;
+    margin: auto;
+    overflow: hidden;
+    width:700px;
+}
+.buttom .link li {
+    float: left;
+}
+.buttom .link li a {
+    text-decoration: none;
+    color: #937341;
+    font-size: 14px;
+}
+.buttom .link li a:hover {
+    color: #afa688;
+}
+.buttom .link span {
+    float: left;
+    color: #937341;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.buttom .copy {
+    width: 362px;
+    color: #afa688;
+    display: block;
+    margin:18px auto;
+    height: 12px;
+    font-size: 12px;
+}
+.buttom .txcopy {
+    display: block;
+    width: 117px;
+    text-decoration: none;
+    color: #937341;
+    margin: auto;
+}
+.buttom .txcopy:hover {
+    color: #afa688;
+}
+/*底部模块结束*/
+
+

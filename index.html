@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>英雄</title>
+    <link rel="stylesheet" href="base.css"/>
+    <link rel="stylesheet" href="css-hero.css"/>
+</head>
+<body>
+<div class="bgi">
+
+</div>
+<!--head模块开始-->
+<div class="top">
+    <div class="left">
+        <img src="images/logo.jpg" alt=""/>
+        <a href="javascript:void(0)">搜索</a>
+        <img src="images/lol名字.png" alt=""/>
+    </div>
+    <div class="center">
+        <img src="images/宇宙.jpg" alt=""/>
+        <span>|</span>
+        <div class="link">
+            <a href="javascript:void(0)">探索<br>
+                <small>EXPLORE</small>
+            </a>
+            <a href="javascript:void(0)">英雄<br>
+                <small>CHAMPIONS</small>
+            </a>
+            <a href="javascript:void(0)">地区<br>
+                <small>REGIONS</small>
+            </a>
+            <a id="xianshi" href="javascript:void(0)">锦集<br>
+                <small>COLLECTIONS</small>
+            </a>
+            <a href="javascript:void(0)" id="linkSearch">搜索<br>
+                <small>SEARCH</small>
+            </a>
+        </div>
+    </div>
+    <div class="right">
+        <a href="javascript:void(0)">[搜索]</a>
+        <span>|</span>
+        <img src="images/故事微博.jpg" alt=""/>
+    </div>
+    <!--<div id="xiala" class="jijin">-->
+        <!--<div class="tuzhi">-->
+            <!--<a href="#">动画工访</a>-->
+            <!--<a href="#">星之守护者</a>-->
+            <!--<a href="#">美术图志</a>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+<!--head模块结束-->
+<!--隐藏的搜索栏开始-->
+<div class="hideSearch" id="hideSearch">
+    <div class="centerHideSearch">
+        <img src="images/fangdajing.png" id="fangdajing" alt=""/>
+        <input type="text" id="hideSearchInput" placeholder="搜索地区和英雄" />
+    </div>
+    <img src="images/close-icon.png" id="closeIcon" alt=""/>
+</div>
+<!--隐藏的搜索栏结束-->
+<!--搜索模块开始-->
+<div class="search">
+    <div class="w">
+        <img src="images/content_type_icon_champion.png" class="icon_champion" alt=""/>
+        <!--搜索栏-->
+        <input type="text" id="head-search" class="head-search" placeholder="找到一个英雄"/>
+        <!--筛选方式-->
+        <div class="select-search">
+            <img src="images/SortDropdownIcon.png"  class="select-icon" alt=""/>
+            <span class="way-span">筛选方式 :</span>
+            <span class="az-span" id="az-span">A-Z</span>
+            <!--伸缩隐藏栏-->
+            <ul class="hide-bar">
+                <li>A-Z</li>
+                <li>最新</li>
+                <li>地区</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--搜索模块结束-->
+<!--内容展示模块开始-->
+<div class="content">
+    <img src="images/content_type_icon_champion.png" class="hero-icon" alt=""/>
+    <h2>英雄</h2>
+    <img src="images/line.png" class="line-left" alt=""/>
+    <img src="images/line.png" class="line-right" alt=""/>
+    <!--英雄卡片-->
+    <div class="hero-card w">
+        <ul id="hero-card-ul" class="hero-card-ul">
+            <!--<li>-->
+                <!--<div class="dw">-->
+                    <!--<div class="intro">-->
+                        <!--<span id="heroname">暗黑元首</span>-->
+                        <!--<p id="buluoname">艾欧尼亚</p>-->
+                    <!--</div>-->
+                    <!--<div class="explore">-->
+                        <!--<span>探索</span>-->
+                        <!--<div class="srow">-->
+                            <!--<span class="hideImg"><img src="images/NextArrow.png" alt=""/></span>-->
+                            <!--<span class="showImg"><img src="images/NextArrow.png" alt=""/></span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+        </ul>
+    </div>
+    <!--回到顶部-->
+    <div class="return-top">回到顶部</div>
+</div>
+<!--内容展示模块结束-->
+<!--底部模块开始-->
+<div class="buttom">
+    <div  class="tencentLogo">
+        <img src="images/tencentLogo.png" alt=""/>
+    </div>
+    <ul class="link">
+        <li><a href="javascript:void(0)">腾讯互动娱乐</a></li><span>|</span>
+        <li><a href="javascript:void(0)">服务条款</a></li><span>|</span>
+        <li><a href="javascript:void(0)">广告服务</a></li><span>|</span>
+        <li><a href="javascript:void(0)">腾讯游戏招聘</a></li><span>|</span>
+        <li><a href="javascript:void(0)">腾讯游戏客服</a></li><span>|</span>
+        <li><a href="javascript:void(0)">游戏地图</a></li><span>|</span>
+        <li><a href="javascript:void(0)">游戏活动</a></li><span>|</span>
+        <li><a href="javascript:void(0)">商务合作</a></li><span>|</span>
+        <li><a href="javascript:void(0)">网站导航</a></li>
+    </ul>
+    <span class="copy">COPYRIGHT © 1998 – 2017 TENCENT. ALL RIGHTS RESERVED.</span>
+    <a href="javascript:void(0)" class="txcopy">腾讯公司 版权所有</a>
+</div>
+<!--底部模块结束-->
+<script src="animateSlow.js"></script>
+<script src="jQuery版本/jquery-1.12.4.js"></script>
+<script>
+    //----------------------------------jq入口函数--------------------------------------
+    $(function () {
+        //---------------------top模块搜索标签的单击事件-------------------------
+        $('#linkSearch').on('click', function () {
+            $('#hideSearch').slideToggle();
+        })
+        $('#closeIcon').on('click', function () {
+            $('#hideSearch').slideUp();
+        })
+        //--------------------------英雄名片部分jq-----------------------------
+        //英雄名字数组
+        var name = ['暗黑元首','暗夜猎手','暗裔剑魔','暗影之拳','傲之追猎者','瓦罗兰之盾','暴怒骑士','暴走萝莉','爆破鬼才','冰晶凤凰','冰霜女巫','不详之刃','策士统领','潮汐海灵','惩戒之箭','翠神','大发明家','刀锋意志','刀锋之影','德邦总管','德玛西亚皇子','德玛西亚之力','德玛西亚之翼','堕落天使','恶魔小丑','发条魔灵','法外狂徒','放逐之刃','风暴之怒','弗雷尔卓德之心'];
+        //部落种族数组
+        var buluo = ['艾欧尼亚','德玛西亚','符文之地','艾欧尼亚','符文之地','巨神峰','诺克萨斯','祖安','皮尔特沃夫','弗雷尔卓德','弗雷尔卓德','诺克萨斯','诺克萨斯','符文之地','艾欧尼亚','符文之地','皮尔特沃夫','艾欧尼亚','诺克萨斯','德玛西亚','德玛西亚','德玛西亚','德玛西亚','符文之地','符文之地','皮尔特沃夫','比尔吉沃特','诺克萨斯','祖安','弗雷尔卓德'];
+
+        var liLeft = 0;
+        var liTop = 0;
+        for(var i = 0; i < 30; i ++){
+            //创建英雄名片
+            $li = $('<li style="width: 232px; height: 420px; margin: 15px 6px;"> <div class="dw"> <div class="intro"> <span id="heroname">暗黑元首</span> <p id="buluoname">艾欧尼亚</p> </div> <div class="explore" style=""> <span>探索</span> <div class="srow"> <span class="hideImg"><img src="images/NextArrow.png" alt=""></span> <span class="showImg"><img src="images/NextArrow.png" alt=""></span> </div> </div> </div> </li>')
+            $li.appendTo($('.hero-card-ul'));
+            $li.css({
+                background:"url(images/"+(i)+".jpg)",
+                backgroundPosition:'84.1152% 9.62343%',
+                backgroundSize:'cover'
+            });
+            //给英雄添加名字
+            $li.find('#heroname').text(name[i]);
+            $li.find('#buluoname').text(buluo[i]);
+            //给所有li标签加定位坐标
+            $li.css({
+                left:liLeft,
+                top:liTop
+            });
+            liTop = (liLeft + 244) > 976? (liTop + 450):liTop;
+            liLeft = (liLeft + 244) > 976? 0:liLeft+ 244;
+
+        }
+        //英雄名片的li标签的父盒子高度随内容变化
+        $('#hero-card-ul').css({height:(liTop)});
+
+        //li 给所有li添加鼠标移入事件
+        $('.hero-card-ul > li').mouseenter(function () {
+            $(this).stop(true,false).animate({
+                'width':254,
+                'height':450,
+                'margin':0,
+                'margin-right':-5,
+                'margin-left':-5
+            },300).siblings().stop(true,false).animate(
+                    {'width':232,
+                        'height':420,
+                        'margin':15,
+                        'margin-right':6,
+                        'margin-left':6
+                    },300);
+            $(this).find('.intro,.explore').stop(true,false).animate(
+                    {'width':254},300).parent().siblings().find('.intro,.explore').stop(true,false).animate(
+                    {'width':232},300);
+            $(this).find('.explore').slideDown("fast").parent().parent().siblings().find('.explore').slideUp("fast");
+            //探索-动画箭头
+//            $(this).find('.explore > i').
+        });
+
+        //li 给所有li添加鼠标移出事件
+        $('.hero-card-ul > li').mouseleave(function () {
+            $(this).stop(true,false).animate(
+                    {'width':232,
+                        'height':420,
+                        'margin-right':6,
+                        'margin-left':6,
+                        'margin':15
+                    },300);
+            $(this).find('.intro,.explore').stop(true,false).animate(
+                    {'width':232},300);
+            $(this).find('.explore').slideUp("fast");
+
+        });
+
+        //回到顶部事件--------------------------------------
+        //window滚动事件
+        var $topHeight = $('.top').height();
+        $(window).scroll(function () {
+            var $scrollTop = $(this).scrollTop();
+            //回到顶部图标淡入淡出
+            if($scrollTop >= $(window).height()){
+                $('.return-top').fadeIn();
+            }else{
+                $('.return-top').fadeOut();
+            }
+            //search栏fixed效果
+            if($scrollTop >= $topHeight){
+                $('.search').addClass('fixed');
+                $('.top').css('margin-bottom',90);
+            }else{
+                $('.search').removeClass('fixed');
+                $('.top').css('margin-bottom',0);
+            }
+
+            //hideSearch栏fixed效果
+            if($scrollTop >= $topHeight){
+                $('#hideSearch').addClass('fixed');
+                $('.top').css('margin-bottom',90);
+            }else{
+                $('#hideSearch').removeClass('fixed');
+                $('.top').css('margin-bottom',0);
+            }
+        });
+
+        //点击按钮回到顶部
+        $('.return-top').click(function () {
+            $('html,body').animate({scrollTop:0},800);
+        });
+
+        //给筛选方式设置单击事件------------------------------------------------------------------
+        $('.select-search').click(function () {
+            $('.hide-bar').slideToggle();
+        });
+        //给li标签添加两个事件（单击、鼠标移入）
+        $('.hide-bar > li').on({
+            'click': function () {
+            $('#az-span').text($(this).text());
+                //添加地区筛选的功能
+                if($('#az-span').text() == '地区'){
+                    var dmcy = [];
+                    var aony = [];
+                    var fwzd = [];
+                    var za = [];
+                    var nkss = [];
+                    var petwf = [];
+                    var liTop = 0;
+                    var liLeft = 0;
+                    $('#hero-card-ul > li').css({display:'none'});
+
+                    //判断输入的内容与英雄名字/部落是否一样
+                    function areaHeroSelect(areaStr,areaArr){
+                        for(var i = 0; i < $('#hero-card-ul > li').length;i++){
+                            if(areaStr === $('#hero-card-ul > li').eq(i).find('#buluoname').text()){
+
+                                areaArr[areaArr.length] = $('#hero-card-ul > li').eq(i);
+
+                            }
+                        }
+                        for (var i = 0; i < areaArr.length; i++) {
+                            //重新给li标签加定位坐标
+                            areaArr[i].css({
+                                left:liLeft,
+                                top:liTop
+                            });
+                            liTop = (liLeft + 244) > 976? (liTop + 450):liTop;
+                            liLeft = (liLeft + 244) > 976? 0:liLeft+ 244;
+                            areaArr[i].css({display:'block'});
+                        }
+//                        liLeft = 0;
+//                        liTop += 450;
+                        //英雄名片的li标签的父盒子高度随内容变化
+                        $('#hero-card-ul').css({height:(liTop+150)});
+                    }
+
+                    //调用areaHeroSelect函数
+                    areaHeroSelect('德玛西亚',dmcy);
+                    areaHeroSelect('艾欧尼亚',aony);
+                    areaHeroSelect('符文之地',fwzd);
+                    areaHeroSelect('祖安',za);
+                    areaHeroSelect('诺克萨斯',nkss);
+                    areaHeroSelect('皮尔特沃夫',petwf);
+                }else{
+                    var liLeft = 0;
+                    var liTop = 0;
+                    for(var i = 0; i < $('#hero-card-ul > li').length; i++){
+                        //重新给所有li标签加定位坐标
+                        $('#hero-card-ul > li').eq(i).css({
+                            left:liLeft,
+                            top:liTop
+                        });
+                        liTop = (liLeft + 244) > 976? (liTop + 450):liTop;
+                        liLeft = (liLeft + 244) > 976? 0:liLeft+ 244;
+                        $('#hero-card-ul > li').css({display:'block'});
+                    }
+                }
+        },
+            'mouseenter': function () {
+                $(this).css({
+                    backgroundColor:'black'
+                }).siblings().css({
+                    backgroundColor:'#121212'
+                });
+            }
+        });
+
+        //----------------搜索英雄------------------------
+        function searchHero(div){
+            var arrHero = [];
+            //英雄搜索框keyup事件
+            $(div).on('keyup', function () {
+                var liLeft = 0;
+                var liTop = 0;
+                var $text = $(div).val();
+                $('#hero-card-ul > li').css({display:'none'});
+                //遍历所有li标签
+                for(var i = 0; i < $('#hero-card-ul > li').length; i++){
+                    //判断输入的内容与英雄名字/部落是否一样
+                    if($text === $('#hero-card-ul > li').eq(i).find('#heroname').text() || $text === $('#hero-card-ul > li').eq(i).find('#buluoname').text()){
+
+                        arrHero[arrHero.length] = $('#hero-card-ul > li').eq(i);
+
+                    }
+
+                    //当输入为空，则恢复原样
+                    if($text == ""){
+                        for(var i = 0; i < $('#hero-card-ul > li').length; i++){
+                            //重新给所有li标签加定位坐标
+                            $('#hero-card-ul > li').eq(i).css({
+                                left:liLeft,
+                                top:liTop
+                            });
+                            liTop = (liLeft + 244) > 976? (liTop + 450):liTop;
+                            liLeft = (liLeft + 244) > 976? 0:liLeft+ 244;
+                            $('#hero-card-ul > li').css({display:'block'});
+                        }
+                        arrHero = [];
+                    }
+                }
+                for (var i = 0; i < arrHero.length; i++) {
+                    //重新给li标签加定位坐标
+                    arrHero[i].css({
+                        left:liLeft,
+                        top:liTop
+                    });
+                    liTop = (liLeft + 244) > 976? (liTop + 450):liTop;
+                    liLeft = (liLeft + 244) > 976? 0:liLeft+ 244;
+                    arrHero[i].css({display:'block'});
+                }
+                //英雄名片的li标签的父盒子高度随内容变化
+                $('#hero-card-ul').css({height:(liTop+150)});
+            });
+        }
+
+        searchHero('#head-search');
+        searchHero('#hideSearchInput');
+
+
+
+        //------------------搜索英雄结束-----------------------------
+
+
+
+        //----------------小箭头动画-------------------------
+        $('.srow').parent().mouseover(function(){
+            $('.hideImg').stop().animate({left:'48px'},300,'linear',function () {
+                /*动画执行完成*/
+            });
+            $('.showImg').stop().animate({left:'96px'},300,'linear');
+        });
+
+        $('.srow').parent().mouseleave(function(){
+            $('.hideImg').stop().animate({left:'-18px'},300,'linear',function () {
+                /*动画执行完成*/
+            });
+            $('.showImg').stop().animate({left:'48px'},300,'linear');
+        });
+    });
+
+</script>
+</body>
+</html>
